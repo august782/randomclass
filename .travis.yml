@@ -1,0 +1,21 @@
+dist: precise
+
+language: java
+
+jdk:
+    - oraclejdk7
+    - openjdk7
+    - openjdk6
+    - oraclejdk8
+
+install:
+    - javac -version
+    - javac Methods.java
+    - javac Fields.java
+
+script:
+    - java -version
+    - echo "METHODS"
+    - java Methods
+    - echo "FIELDS"
+    - java Fields
